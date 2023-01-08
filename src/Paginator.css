@@ -1,0 +1,81 @@
+.pagination ul {
+    list-style: none;
+    font-size: clamp(1.5vw, 2rem, 1.4rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    /* padding: 1rem; */
+    font-weight: semi-bold;
+}
+
+ul li {
+    cursor: pointer;
+    padding: min(1.5rem, 1.5vw);
+    text-align: center;
+    user-select: none;
+    transition:width 0.3s ease-in-out;
+}
+
+li {
+    border-radius: 50%;
+    padding: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:1vw;
+    height:1vw;
+    /* transition:width 1s ease-in-out; */
+    /* transform: all 0.3s; */
+    animation: fade 0.3s forwards;
+    -webkit-animation: fade 0.3s forwards;
+}
+
+li:hover {
+    background-color: ghostwhite;
+}
+
+.dots:hover {
+    background: transparent;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateX(2vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(1vw);
+    }
+}
+
+@keyframes fade {
+    from {
+        /* opacity: 0; */
+        transform: translateX(2vw);
+    }
+    to {
+        /* opacity: 1; */
+        transform: translateX(1vw);
+    }
+}
+  
+
+ul .active {
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+}
+  
+.back,
+.forward {
+    display: flex;
+    border: solid transparent 1px;
+    border-radius: 50px;
+}
+
+.back:hover,
+.forward:hover {
+    border-radius: 50px;
+    border: solid 0.5px;
+}
